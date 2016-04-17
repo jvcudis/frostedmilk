@@ -2,46 +2,36 @@
 
 /* Buttons */
 .btn {
+  padding: 10px;
+  font-size: 1.2em;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  padding: 10px;
-  border: 1px solid transparent;
-  font-size: 1.2em;
   background-image: none;
+  border: 1px solid transparent;
 }
 
 /* Icons */
 [class^="flaticon-"]:before,
-[class*="flaticon-"]:before {
-  margin-left: 0px;
-}
+[class*="flaticon-"]:before { margin-left: 0px; }
 
 [class^="icon-xxlarge flaticon-"]:before,
-[class*="icon-xxlarge flaticon-"]:before {
-  font-size: 3em;
-}
+[class*="icon-xxlarge flaticon-"]:before { font-size: 40px; }
 
 [class^="icon-xlarge flaticon-"]:before,
-[class*="icon-xlarge flaticon-"]:before {
-  font-size: 2.5em;
-}
+[class*="icon-xlarge flaticon-"]:before { font-size: 35px; }
 
 [class^="icon-large flaticon-"]:before,
-[class*="icon-large flaticon-"]:before {
-  font-size: 30px;
-}
+[class*="icon-large flaticon-"]:before { font-size: 30px; }
 
 [class^="icon-normal flaticon-"]:before,
-[class*="icon-normal flaticon-"]:before {
-  font-size: 1.5em;
-}
+[class*="icon-normal flaticon-"]:before { font-size: 28px; }
 
 /* Utils */
 hr {
-  margin: 0 auto;
   width: 8%;
-  border-color: #979797;
+  margin: 0 auto;
   margin-top: 3em;
   margin-bottom: 2em;
+  border-color: #979797;
 }

@@ -1,13 +1,12 @@
 /* Campaign Section START */
 .carousel-bg-img {
+  height: 20%;
   background: url("../lib/img/workplace.png") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 20%;
 }
-
 .carousel-company-logo {
   position: absolute;
   top: 0;
@@ -20,11 +19,7 @@
   top: 175px;
   left: 0;
 }
-
-.arrow-left {
-  margin-left: 20px;
-}
-
+.arrow-left { margin-left: 20px; }
 .arrow-right {
   right: 0;
   left: auto;
@@ -35,33 +30,28 @@
   display: inline-block;
   width: 28%;
   min-width: 330px;
-  margin: 60px 80px;
   padding: 3em 1em 4em 3em;
-  background-color: #C6201A;
+  margin: 60px 80px;
   color: #FFFFFF;
+  background-color: #C6201A;
 }
-
 .carousel-text-panel > h2 {
   font-size: 3em;
   line-height: 1.1em;
 }
-
 .carousel-text-panel > p {
   margin-top: 0.8em;
   font-size: 1.9em;
-  font-style: italic;
   font-weight: 200;
+  font-style: italic;
 }
 /* Campaign Section END */
 
 /* Intro Section START */
+#introSection p { font-size: 1.2em; }
 #introSection h2 {
   font-size: 2.8em;
   color: #C6201A;
-}
-
-#introSection p {
-  font-size: 1.2em;
 }
 
 /* Intro Section END */
@@ -72,55 +62,54 @@
 #tabUser i,
 #tabUser .box-content h4 { color: #C6201A; }
 #tabUser .box-icon { background-color: #C6201A; }
-#tabUser .btn-more-details { color: #C6201A; border: 1px solid #C6201A; }
+#tabUser .btn-more-details {
+  color: #C6201A;
+  border: 1px solid #C6201A;
+}
 
 #tabSetting h3,
 #tabSetting i,
 #tabSetting .box-content h4 { color: #004762; }
 #tabSetting .box-icon { background-color: #004762; }
-#tabSetting .btn-more-details { color: #004762; border: 1px solid #004762; }
+#tabSetting .btn-more-details {
+  color: #004762;
+  border: 1px solid #004762;
+}
 
 #tabContact h3,
 #tabContact i,
 #tabContact .box-content h4 { color: #74882D; }
 #tabContact .box-icon { background-color: #74882D; }
-#tabContact .btn-more-details { color: #74882D; border: 1px solid #74882D; }
-
-#productSection {
-  width: 100%;
-  display: inline-block;
-  margin-bottom: -5px;
+#tabContact .btn-more-details {
+  color: #74882D;
+  border: 1px solid #74882D;
 }
 
+#productSection {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: -5px;
+}
 #productSection h3.splash {
+  padding-top: 0.8em;
   font-weight: 200;
   font-style: italic;
   color: #505050;
-  padding-top: 0.8em;
-}
-
-.business-text {
-  display: inline-block;
 }
 
 .business-text i,
+.business-text h3 { float: left; }
+.business-text { display: inline-block; }
 .business-text h3 {
-  float: left;
-}
-
-.business-text h3 {
-  font-weight: 500;
   margin-left: 0.4em;
+  font-weight: 500;
 }
 
 .right-border {
   padding-right: 2em !important;
   border-right: 1px solid #979797 !important;
 }
-
-.no-left-space {
-  margin-left: -1.5em !important;
-}
+.no-left-space { margin-left: -1.5em !important; }
 
 .btn-more-details {
   width: 250px;
@@ -128,35 +117,25 @@
   font-size: 1em;
   background-color: transparent;
 }
-
 .btn-more-details p.btn-text span {
   position: relative;
   content: 'Aenean volutpat non diam'
 }
-
-.btn-more-details:hover p.btn-text span {
-  display: none;
-}
-
+.btn-more-details:hover p.btn-text span { display: none; }
+.btn-more-details:hover p.btn-text:after { content: 'See More Emails and Resources' }
 .btn-more-details:hover {
   color: #FFFFFF !important;
   background-color: #0072C6;
   border: 1px solid transparent !important;
 }
 
-.btn-more-details:hover p.btn-text:after {
-  content: 'See More Emails and Resources'
-}
 /* Product Section END */
 
 /* Share Section START */
+#shareSection h2 { margin-top: -5px; }
 #shareSection {
-  background-color: #C6201A;
   color: #FFFFFF;
-}
-
-#shareSection h2 {
-  margin-top: -5px;
+  background-color: #C6201A;
 }
 
 .btn-share {
@@ -164,21 +143,11 @@
   margin: 1.5em 0 2.5em;
   background-color: #750400;
 }
-
 .btn-share p.btn-text span {
   position: relative;
   content: 'est venenatis quis';
 }
-
-.btn-share:hover p.btn-text span {
-  display: none;
-}
-
-.btn-share:hover {
-  background-color: #9A0500;
-}
-
-.btn-share:hover p.btn-text:after {
-  content: 'Share this Page'
-}
+.btn-share:hover p.btn-text span { display: none; }
+.btn-share:hover { background-color: #9A0500; }
+.btn-share:hover p.btn-text:after { content: 'Share this Page' }
 /* Share Section END */

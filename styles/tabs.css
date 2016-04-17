@@ -1,86 +1,65 @@
 /* Tabs */
-/* TODO: Refactor to follow convention. */
 
 .tabs {
-  width:100%;
-  display:inline-block;
-  float:left;
-  overflow:hidden;
+  float: left;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
 }
 
 ul.tab-navigation {
-  background-color: #FFFFFF;
-  clear: left;
-  float: left;
   position: relative;
   left: 50%;
+  float: left;
+  clear: left;
   text-align: center;
+  background-color: #FFFFFF;
 }
-
 ul.tab-navigation:after {
   display: block;
   clear: both;
   content: '';
 }
-
 ul.tab-navigation li {
-  margin: 0px;
+  position: relative;
+  right: 50%;
   float: left;
-  list-style: none;
   padding: 1.2em 3em;
-  float:left;
-  position:relative;
+  margin: 0px;
   background:#FFFFFF;
-  right:50%;
+  list-style: none;
 }
-
 ul.tab-navigation li > a {
   display: block;
-  border: 1px solid transparent;
   font-size: 1.3em;
   font-weight: 500;
   color: #979797;
+  border: 1px solid transparent;
   transition:all linear 0.15s;
   text-decoration: none;
 }
-
 ul.tab-navigation li > a i {
-  margin: 0;
+  margin: 0px;
   margin-right: 10px;
 }
-
-ul.tab-navigation li > a:hover {
-  color: #505050;
-}
-
+ul.tab-navigation li > a:hover { color: #505050; }
 ul.tab-navigation li.active,
 ul.tab-navigation li.active > a {
-  background: #EFEFEF;
   color: #505050;
+  background: #EFEFEF;
 }
 
 .tab-content {
+  float: left;
   width: 100%;
   padding: 1em;
   background: #EFEFEF;
   clear: left;
-  float: left;
 }
-
-.tab-content-panel {
-  display: none;
-}
-
-.tab-content-panel.active {
-  display: block;
-}
+.tab-content-panel { display: none; }
+.tab-content-panel.active { display: block; }
 
 @media (max-width: 1024px) {
-  ul.tab-navigation span {
-    display: none;
-  }
-
-  ul.tab-navigation li > a i {
-    margin: 0px; 
-  }
+  ul.tab-navigation span { display: none; }
+  ul.tab-navigation li > a i { margin: 0px; }
 }
