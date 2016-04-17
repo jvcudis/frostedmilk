@@ -11,8 +11,7 @@
     $(this).parent('li').addClass('active').siblings().removeClass('active');
 
     // Toggle adding of border
-    // Refactor later
-    if (currentEl == 'userTab') {
+    if (currentEl === 'userTab') {
       $('#settingTab').toggleClass('right-border');
       $('#contactTab').toggleClass('no-left-space');
     } else {
@@ -20,7 +19,7 @@
       $('#contactTab').removeClass('no-left-space');
     }
 
-    if (currentEl == 'contactTab') {
+    if (currentEl === 'contactTab') {
       $('#userTab').toggleClass('right-border');
       $('#settingTab').toggleClass('no-left-space');
     } else {
