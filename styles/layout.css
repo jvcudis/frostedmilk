@@ -1,0 +1,80 @@
+/* Layout */
+
+/* Section */
+.section-container {
+  padding: 30px 80px;
+  text-align: center;
+}
+
+.section-container > p {
+  width: 80%;
+  padding-top: 1em;
+  display: inline-block;
+  line-height: 1.8em;
+  color: #505050;
+}
+
+/* Step Box for Product Section */
+.step-box-container {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.step-box-container > .step-box:first-child {
+  padding-left: 11em;
+}
+
+.step-box {
+  text-align: left;
+  padding-left: 5em;
+}
+
+.step-box .box-icon {
+  float: left;
+  padding: 0.5em 1em;
+  margin-top: 0.3em;
+}
+
+.step-box .box-icon i {
+  color: #FFFFFF !important;
+}
+
+.step-box .box-content {
+  display: inline-block;
+  padding-left: 1.5em;
+}
+
+.step-box .box-content small {
+  font-weight: 700;
+}
+
+.step-box .box-content p {
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .step-box-container > .step-box:first-child {
+    padding-left: 1em;
+    margin-bottom: 2em;
+  }
+
+  .step-box {
+    padding-left: 1em !important;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #4B4B4B;
+  color: #FFFFFF;
+}
+
+.footer-content {
+  padding: 10px 80px;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  float: right;
+}

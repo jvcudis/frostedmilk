@@ -1,0 +1,20 @@
+/* Scaffolding */
+
+body {
+  font-family: 'Open Sans', Tahoma, Geneva, sans-serif;
+  color: #505050;
+  background-color: #FFFFFF;
+}
+
+*,
+*:before,
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0px;
+  font-size: 100%;
+  font: inherit;
+}
