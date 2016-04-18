@@ -18,9 +18,14 @@
   padding-top: 2em;
   padding-bottom: 2em;
 }
-.step-box-container > .step-box:first-child { padding-left: 11em; }
+.step-box-container > .step-box:first-child {
+  right: 37%;
+  float: right;
+  left: auto;
+}
 .step-box {
-  padding-left: 5em;
+  left: 55%;
+  float: left;
   text-align: left;
 }
 .step-box .box-icon i { color: #FFFFFF !important; }
@@ -38,10 +43,10 @@
 
 @media (max-width: 1024px) {
   .step-box-container > .step-box:first-child {
-    padding-left: 1em;
+    float: left;
     margin-bottom: 2em;
   }
-  .step-box { padding-left: 1em !important; }
+  .step-box { left: 5% !important; }
 }
 
 /* Footer */
