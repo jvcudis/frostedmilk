@@ -1,0 +1,9 @@
+/* Satisfy CSS */
+
+@font-face {
+  font-family: 'Satisfy';
+  src: url('./Satisfy/Satisfy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
+}

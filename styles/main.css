@@ -1,153 +1,24 @@
-/* Campaign Section START */
-.carousel-bg-img {
-  height: 20%;
-  background: url("../lib/img/workplace.png") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.carousel-company-logo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 25px 85px;
+/* Blog Post Section CSS */
+.post {
+  margin: 10px 200px;
+  border-top: 3px solid #555555;
 }
 
-.carousel-arrow {
-  position: absolute;
-  top: 175px;
-  left: 0;
-}
-.arrow-left { margin-left: 20px; }
-.arrow-right {
-  right: 0;
-  left: auto;
-  margin-right: 20px;
-}
-
-.carousel-text-panel {
-  display: inline-block;
-  width: 28%;
-  min-width: 330px;
-  padding: 3em 1em 4em 3em;
-  margin: 60px 80px;
-  color: #FFFFFF;
-  background-color: #C6201A;
-}
-.carousel-text-panel > h2 {
-  font-size: 3em;
-  line-height: 1.1em;
-}
-.carousel-text-panel > p {
-  margin-top: 0.8em;
-  font-size: 1.9em;
-  font-weight: 200;
-  font-style: italic;
-}
-/* Campaign Section END */
-
-/* Intro Section START */
-#introSection p { font-size: 1.2em; }
-#introSection h2 {
-  font-size: 2.8em;
-  color: #C6201A;
-}
-
-/* Intro Section END */
-
-/* Product Section START */
-/* Tab Content Theme */
-#tabUser h3,
-#tabUser i,
-#tabUser .box-content h4 { color: #C6201A; }
-#tabUser .box-icon { background-color: #C6201A; }
-#tabUser .btn-more-details {
-  color: #C6201A;
-  border: 1px solid #C6201A;
-}
-
-#tabSetting h3,
-#tabSetting i,
-#tabSetting .box-content h4 { color: #004762; }
-#tabSetting .box-icon { background-color: #004762; }
-#tabSetting .btn-more-details {
-  color: #004762;
-  border: 1px solid #004762;
-}
-
-#tabContact h3,
-#tabContact i,
-#tabContact .box-content h4 { color: #74882D; }
-#tabContact .box-icon { background-color: #74882D; }
-#tabContact .btn-more-details {
-  color: #74882D;
-  border: 1px solid #74882D;
-}
-
-#productSection {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: -5px;
-}
-#productSection h3.splash {
-  padding-top: 0.8em;
-  font-weight: 200;
-  font-style: italic;
-  color: #505050;
-}
-
-.business-text i,
-.business-text h3 { float: left; }
-.business-text { display: inline-block; }
-.business-text h3 {
-  margin-left: 0.4em;
-  font-weight: 500;
-}
-
-.right-border {
-  padding-right: 2em !important;
-  border-right: 1px solid #979797 !important;
-}
-.no-left-space { margin-left: -1.5em !important; }
-
-.btn-more-details {
-  width: 250px;
+.post > h1 {
+  padding: 0;
+  margin: 0px 0px 25px 0px;
+  font-family: 'Playfair Display';
+  font-size: 40px;
   font-weight: 700;
-  font-size: 1em;
-  background-color: transparent;
-}
-.btn-more-details p.btn-text span {
-  position: relative;
-  content: 'Aenean volutpat non diam'
-}
-.btn-more-details:hover p.btn-text span { display: none; }
-.btn-more-details:hover p.btn-text:after { content: 'See More Emails and Resources' }
-.btn-more-details:hover {
-  color: #FFFFFF !important;
-  background-color: #0072C6;
-  border: 1px solid transparent !important;
+  letter-spacing: -1px;
+  color: rgba(85, 85, 85, 1);
+  text-align: left;
 }
 
-/* Product Section END */
-
-/* Share Section START */
-#shareSection h2 { margin-top: -5px; }
-#shareSection {
-  color: #FFFFFF;
-  background-color: #C6201A;
+.post > p {
+  font-family: 'Asap';
+  color: #555;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
 }
-
-.btn-share {
-  width: 200px;
-  margin: 1.5em 0 2.5em;
-  background-color: #750400;
-}
-.btn-share p.btn-text span {
-  position: relative;
-  content: 'est venenatis quis';
-}
-.btn-share:hover p.btn-text span { display: none; }
-.btn-share:hover { background-color: #9A0500; }
-.btn-share:hover p.btn-text:after { content: 'Share this Page' }
-/* Share Section END */

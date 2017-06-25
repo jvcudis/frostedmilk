@@ -1,32 +1,15 @@
 (function($) {
 
-  $('a.tab-nav-item').on('click', function(evt) {
-    evt.preventDefault();
+  $(window).on('scroll', function(event) {
+    event.preventDefault()
 
-    var currentAttrValue = $(this).attr('href')
-        currentEl = $(this).attr('id');
+    var height = $(window).scrollTop();
 
-    // Toggle tab content
-    $('.tab-content ' + currentAttrValue).show().siblings().hide();
-    $(this).parent('li').addClass('active').siblings().removeClass('active');
-
-    // Toggle adding of border
-    if (currentEl === 'userTab') {
-      $('#settingTab').toggleClass('right-border');
-      $('#contactTab').toggleClass('no-left-space');
+    if (height > 0) {
+      $('#header').addClass('scrolled')
     } else {
-      $('#settingTab').removeClass('right-border');
-      $('#contactTab').removeClass('no-left-space');
+      $('#header').removeClass('scrolled')
     }
-
-    if (currentEl === 'contactTab') {
-      $('#userTab').toggleClass('right-border');
-      $('#settingTab').toggleClass('no-left-space');
-    } else {
-      $('#userTab').removeClass('right-border');
-      $('#settingTab').removeClass('no-left-space');
-    }
-
   })
 
 })(jQuery);
