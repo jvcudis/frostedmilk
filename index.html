@@ -57,7 +57,10 @@
         <p><bold>BENTO</bold> prepared 2 minutes ago</p>
       </div>
       <div class='post__content'>
-        <canvas id="bento1" width="700" height="900"></canvas>
+        <div id='bento1'>
+          <canvas width="700" height="900"></canvas>
+          <div class='bento-links'></div>
+        </div>
       </div>
     </section>
 
@@ -82,11 +85,7 @@
   </footer>
 
   <script>
-    var myFont = new FontFace('Fira Sans', "url('vendors/fonts/Fira_Sans/FiraSans-Regular.ttf')");
-
     // Color stuffies
-    var textFont = '15px Fira Sans'
-    var textColor = '#555'
     var lineColor = '#c82124'
     var linkWidth
     var linkHeight = 10
@@ -108,21 +107,28 @@
       context.closePath();
     }
 
-    var createText = function(context, text, x, y, color) {
-      context.beginPath();
-      context.font = textFont;
-      context.fillStyle = color
-      context.fillText(text, x, y);
-      linkWidth = context.measureText(text).width;
-      linkHeight = context.measureText(text).height;
-      context.closePath()
+    var createLink = function(dish) {
+      var span = document.createElement('span')
+      span.style.left = dish.x + 'px';
+      span.style.top = dish.y + 'px';
+      span.style.width = '100px';
+
+      var a = document.createElement('a')
+      var text = document.createTextNode(dish.name)
+      a.setAttribute('href', dish.url);
+
+      a.appendChild(text)
+      span.appendChild(a);
+
+      return span;
     }
 
     var createBento = function(elementId, imgSrc, dishes) {
-      var canvas = document.getElementById(elementId);
+      var container = document.getElementById(elementId);
+      var canvas = container.querySelector('canvas')
+      var linksContainer = container.querySelector('div.bento-links')
       var ctx = canvas.getContext('2d');
       var img = new Image();
-      var _link = '';
 
       img.src = imgSrc;
 
@@ -135,59 +141,16 @@
           createLine(ctx, pos.x1, pos.y2, pos.x2, pos.y2)
           createDot(ctx, pos.x1, pos.y1)
           createDot(ctx, pos.x2, pos.y2)
-          createText(ctx, dish.name, dish.x, dish.y, textColor)
+          linksContainer.insertAdjacentElement('beforeend', createLink(dish))
         })
       };
-
-      function mouseMoveHandler(evt) {
-        var x, y;
-
-        // Get the mouse position relative to the canvas element.
-        if (evt.layerX || evt.layerX == 0) {
-          x = evt.layerX;
-          y = evt.layerY;
-        }
-
-        var n = dishes.length;
-        var links = dishes.textPos
-
-        dishes.forEach(function(dish) {
-          var link = dish.textPos
-          var linkX = parseInt(link[0]),
-              linkY = parseInt(link[1]),
-              linkwidth = parseInt(link[2]),
-              linkheight = parseInt(link[3]);
-
-          if((x >= linkX && (x <= (linkX + linkWidth)) && (y >= linkY) && (y <= (linkY + linkheight)))) {
-            document.body.style.cursor = 'pointer';
-            _link = dish.url;
-            createText(ctx, dish.name, dish.x, dish.y, lineColor)
-            return;
-          }
-          else {
-            document.body.style.cursor = '';
-          }
-        })
-      }
-
-      function clickLinkHandler(evt) {
-        if (_link != '') {
-          window.open(_link);
-        }
-      }
-
-      canvas.addEventListener('mousemove', mouseMoveHandler, false);
-      canvas.addEventListener('click', clickLinkHandler, false);
     }
 
     const dishes = [
-      { name: 'PORK SATAY', url: 'www.google.com', x: 507, y: 205, pos: { x1: 440, y1: 390, x2: 500, y2: 200 }, textPos: [507, 190, linkWidth, linkHeight] }
+      { name: 'PORK SATAY', x: 507, y: 205, url: 'www.google.com', pos: { x1: 440, y1: 390, x2: 500, y2: 200 }, textPos: [507, 190, linkWidth, linkHeight] }
     ]
 
-    myFont.load().then(function(font){
-      document.fonts.add(font);
-      createBento('bento1', 'lib/img/bento1.jpg', dishes)
-    });
+    createBento('bento1', 'lib/img/bento1.jpg', dishes)
   </script>
 
   <!-- Vendor scripts -->

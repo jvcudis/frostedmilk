@@ -19,7 +19,7 @@
 }
 
 .post__header > p {
-  font-family: 'Fira Sans'
+  font-family: 'Fira Sans';
 }
 
 .post__content {
@@ -49,8 +49,29 @@
 }
 
 .image-overlay-container {}
-  
+
 #myCanvas {
   position: relative;
   z-index: 20;
+}
+
+.bento > .post__content {
+  position: relative;
+}
+
+.bento > .post__content > div > canvas {
+  z-index: 0;
+}
+
+.bento > .post__content > div > .bento-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.bento > .post__content > div > .bento-links > span {
+  position: absolute;
+  font-family: 'Fira Sans';
+  text-transform: uppercase;
 }
