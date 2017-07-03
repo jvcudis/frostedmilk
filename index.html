@@ -33,9 +33,10 @@
   </header>
 
   <div class='wrapper'>
-    <section class='post just-text'>
+    <section class='post thoughts'>
       <div class='post__header'>
-        <h1>Monday Morning Bento</h1>
+        <h1>Living on a Prayer</h1>
+        <p><bold>THOUGHTS</bold> written 3 years ago</p>
       </div>
       <div class='post__content'>
         <p>
@@ -49,6 +50,29 @@
         </p>
       </div>
     </section>
+
+    <section class='post bento'>
+      <div class='post__header'>
+        <h1>Tuesday Lunch Bento</h1>
+        <p><bold>BENTO</bold> prepared 2 minutes ago</p>
+      </div>
+      <div class='post__content'>
+        <canvas id="bento1" width="700" height="900"></canvas>
+      </div>
+    </section>
+
+    <section class='post recipe'>
+      <div class='post__header'>
+        <h1>Sweet & Sour Pork</h1>
+        <p><bold>RECIPE</bold> posted 2 hours ago</p>
+      </div>
+      <div class='post__content'>
+        <img src='lib/img/sweetpork.jpg' />
+        <div class='recipe-box'>
+
+        </div>
+      </div>
+    </section>
   </div>
 
   <footer>
@@ -56,6 +80,115 @@
       <small>All rights reserved. Powered by Jekyll</small>
     </div>
   </footer>
+
+  <script>
+    var myFont = new FontFace('Fira Sans', "url('vendors/fonts/Fira_Sans/FiraSans-Regular.ttf')");
+
+    // Color stuffies
+    var textFont = '15px Fira Sans'
+    var textColor = '#555'
+    var lineColor = '#c82124'
+    var linkWidth
+    var linkHeight = 10
+
+    var createDot = function(context, x, y) {
+      context.beginPath();
+      context.fillStyle = lineColor
+      context.arc(x, y, 3, 0, Math.PI * 2, true);
+      context.fill();
+      context.closePath();
+    }
+
+    var createLine = function(context, x1, y1, x2, y2) {
+      context.beginPath();
+      context.moveTo(x1, y1);
+      context.lineTo(x2, y2);
+      context.strokeStyle = lineColor
+      context.stroke();
+      context.closePath();
+    }
+
+    var createText = function(context, text, x, y, color) {
+      context.beginPath();
+      context.font = textFont;
+      context.fillStyle = color
+      context.fillText(text, x, y);
+      linkWidth = context.measureText(text).width;
+      linkHeight = context.measureText(text).height;
+      context.closePath()
+    }
+
+    var createBento = function(elementId, imgSrc, dishes) {
+      var canvas = document.getElementById(elementId);
+      var ctx = canvas.getContext('2d');
+      var img = new Image();
+      var _link = '';
+
+      img.src = imgSrc;
+
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0);
+
+        dishes.forEach(function(dish) {
+          const pos = dish.pos
+          createLine(ctx, pos.x1, pos.y1, pos.x1, pos.y2)
+          createLine(ctx, pos.x1, pos.y2, pos.x2, pos.y2)
+          createDot(ctx, pos.x1, pos.y1)
+          createDot(ctx, pos.x2, pos.y2)
+          createText(ctx, dish.name, dish.x, dish.y, textColor)
+        })
+      };
+
+      function mouseMoveHandler(evt) {
+        var x, y;
+
+        // Get the mouse position relative to the canvas element.
+        if (evt.layerX || evt.layerX == 0) {
+          x = evt.layerX;
+          y = evt.layerY;
+        }
+
+        var n = dishes.length;
+        var links = dishes.textPos
+
+        dishes.forEach(function(dish) {
+          var link = dish.textPos
+          var linkX = parseInt(link[0]),
+              linkY = parseInt(link[1]),
+              linkwidth = parseInt(link[2]),
+              linkheight = parseInt(link[3]);
+
+          if((x >= linkX && (x <= (linkX + linkWidth)) && (y >= linkY) && (y <= (linkY + linkheight)))) {
+            document.body.style.cursor = 'pointer';
+            _link = dish.url;
+            createText(ctx, dish.name, dish.x, dish.y, lineColor)
+            return;
+          }
+          else {
+            document.body.style.cursor = '';
+          }
+        })
+      }
+
+      function clickLinkHandler(evt) {
+        if (_link != '') {
+          window.open(_link);
+        }
+      }
+
+      canvas.addEventListener('mousemove', mouseMoveHandler, false);
+      canvas.addEventListener('click', clickLinkHandler, false);
+    }
+
+    const dishes = [
+      { name: 'PORK SATAY', url: 'www.google.com', x: 507, y: 205, pos: { x1: 440, y1: 390, x2: 500, y2: 200 }, textPos: [507, 190, linkWidth, linkHeight] }
+    ]
+
+    myFont.load().then(function(font){
+      document.fonts.add(font);
+      createBento('bento1', 'lib/img/bento1.jpg', dishes)
+    });
+  </script>
 
   <!-- Vendor scripts -->
   <script src='vendors/js/jquery.js'></script>

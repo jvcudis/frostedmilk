@@ -18,6 +18,10 @@
   color: rgba(85, 85, 85, 1);
 }
 
+.post__header > p {
+  font-family: 'Fira Sans'
+}
+
 .post__content {
   margin: 0 100px;
   font-family: 'Source Sans Pro';
@@ -28,7 +32,8 @@
   line-height: 28px;
 }
 
-.post__content > p {
+.post__content > p,
+.post__content > div {
   padding-bottom: 15px;
 }
 
@@ -41,4 +46,11 @@
   padding-top: 4px;
   padding-right: 8px;
   padding-left: 3px;
+}
+
+.image-overlay-container {}
+  
+#myCanvas {
+  position: relative;
+  z-index: 20;
 }

@@ -53,6 +53,7 @@ header > #nav-container > a.selected {
 /* Footer */
 footer {
   height: 40px;
+  margin-top: 60px;
   color: #FFFFFF;
   background-color: #4B4B4B;
 }
