@@ -57,8 +57,12 @@ img {
 	flex-direction: column;
 }
 
+.sub-header > h3 {
+  font-size: 5rem;
+}
+
 .sub-header > h4 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	padding-top: 1rem;
 }
 
@@ -118,8 +122,8 @@ footer > div.contents > section > article {
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	margin: -1rem -1rem;
-	padding-bottom: 5rem;
+	margin: -0.5rem -0.5rem;
+	padding-bottom: 2rem;
 }
 
 .gallery-item {
@@ -147,7 +151,7 @@ footer > div.contents > section > article {
 	padding: 1rem;
 	background-color: rgba(0, 0, 0, 0.3);
 	align-items: center;
-    justify-content: center;
+  justify-content: center;
 }
 
 .gallery-item-info {
@@ -157,11 +161,10 @@ footer > div.contents > section > article {
 .gallery-item-info > span {
 	padding: 1rem;
 	font-size: 1.5rem;
-/* 	background-color: rgba(0, 0, 0, 0.1); */
 	color: #fff;
 	font-weight: 200;
 	text-transform: uppercase;
-	letter-spacing: 0.2rem;
+	letter-spacing: 0.1rem;
 	line-height: 2rem;
 }
 
