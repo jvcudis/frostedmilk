@@ -24,7 +24,7 @@
 
 .post__content {
   margin: 0;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   color: #555;
   font-size: 15px;
   font-style: normal;
