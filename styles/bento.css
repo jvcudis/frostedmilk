@@ -142,47 +142,15 @@ footer > div.contents > section > article {
 	box-shadow: none;
 }
 
-.gallery-item:hover .gallery-item-info {
+.gallery-text {
 	display: flex;
-	position: absolute;
-	top: 0;
+	flex-direction: column;
+	color: #000;
+}
+
+.gallery-text > span {
 	text-align: center;
-	width: 100%;
-	height: 100%;
-	padding: 1rem;
-	background-color: rgba(0, 0, 0, 0.3);
-	align-items: center;
-  justify-content: center;
-}
-
-.gallery-item-info {
-	display: none;
-}
-
-.gallery-item-info > span {
-	padding: 1rem;
-	font-size: 1.5rem;
-	color: #fff;
-	font-weight: 200;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	line-height: 2rem;
-}
-
-.date-info {
-	position: absolute;
-	bottom: 1rem;
-	right: 1rem;
-	font-size: 1.5rem;
-	text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item-type {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-	font-size: 2.5rem;
-	text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+	padding: 1.2rem;
 }
 
 .gallery-image {
