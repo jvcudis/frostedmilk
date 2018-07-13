@@ -124,13 +124,13 @@ footer > div.contents > section > article {
 	display: flex;
 	flex-wrap: wrap;
 	margin: -0.5rem -0.5rem;
-	padding-bottom: 2rem;
+	padding-bottom: 5rem;
 }
 
 .gallery-item {
 	position: relative;
 	border: 2rem solid #fff;
-	flex: 1 0 25rem;
+	flex: 1 0 30rem;
 	margin: 1rem;
 	color: #fff;
 	cursor: pointer;
